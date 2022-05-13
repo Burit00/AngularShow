@@ -1,0 +1,46 @@
+*{
+  color: black;
+}
+.container{
+  float: left;
+  width: 100%;
+  display: block;
+}
+.block{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 20px;
+  border: #CC67CE solid 2px;
+  border-radius: 30px;
+  padding: 20px;
+}
+.photo{
+  float: left;
+}
+.descriptions{
+  float: left;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descriptions div{
+  width: 100%;
+}
+.description, .favorite{
+  margin-top: 30px;
+}
+.favorite{
+  display: flex;
+  justify-content: right;
+}
+button{
+  background: none;
+  border: none;
+}
+button:hover{
+  cursor: pointer;
+}
+b{
+  color: #CC67CE;
+}

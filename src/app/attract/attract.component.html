@@ -1,0 +1,22 @@
+<div class="container">
+<div class="block" *ngFor="let attraction of listOfAttraction | filter: sortCategory[0].category ">
+<div appSetImage [link]="attraction.image" class="photo">
+</div>
+<div class="descriptions">
+  <div>
+    <div class="description">Nazwa Obiektu: <b>{{ attraction.name }}</b></div>
+  <div class="description">Lokalizacja: <b>{{ attraction.country }}</b></div>
+  <div class="description">Rok ukonczenia budowy: <b>{{ attraction.yearOfBuild }}</b></div>
+   <div class="description, favorite"  >
+     <button class="fav" (click)="favOrNot(attraction)">
+       <img *ngIf="attraction.favorite == false; else fill" src="assets/heartNoFill.svg" alt="">
+       <ng-template #fill>
+         <img src="assets/heartFill.svg" alt="">
+        </ng-template>
+  </button>
+  </div>
+  </div>
+
+</div>
+</div>
+</div>

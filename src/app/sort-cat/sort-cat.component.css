@@ -1,0 +1,44 @@
+.container{
+  color: white;
+  background-color: #CC67CE;
+  border: 3px solid black;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 9;
+  width: max-content;
+  height: 70px;
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-80%);
+  transition: height 1s , transform 1s 1s;
+  box-shadow: black 0px 0px 20px;
+}
+
+.container:hover{
+  transform: translateX(-20%);
+  height: 195px;
+  transition: transform 1s, height 1s 1s;
+}
+.container:hover .options{
+  cursor: pointer;
+}
+.options{
+  margin-top: 10px;
+  cursor: default;
+  width: max-content;
+}
+.select{
+  overflow: hidden;
+  width: 5rem;
+  width: max-content;
+  margin: 20px;
+  margin-left: 50px;
+}
+.sort{
+  border-bottom: 2px solid black;
+  cursor: default;
+}
+.option{
+  margin-top: 5px;
+}
