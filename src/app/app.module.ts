@@ -10,7 +10,6 @@ import { FavIconDirective } from './directives/fav-icon.directive';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortCatComponent } from './sort-cat/sort-cat.component';
 import { FavService } from './services/fav.service';
-import { MyfavoriteComponent } from './myfavorite/myfavorite.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { FooterComponent } from './footer/footer.component';
     FavIconDirective,
     FilterPipe,
     SortCatComponent,
-    MyfavoriteComponent,
     FooterComponent
   ],
   imports: [
