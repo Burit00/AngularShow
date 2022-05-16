@@ -14,15 +14,9 @@ export class SetImageDirective implements OnInit {
 
    ngOnInit(): void {
     this.image.src = this.link;
-    this.image.style = "height: 400px;border-radius: 20px; box-shadow: 0px 0px 10px black;";
+    this.image.class = "leftPhoto";
+    this.image.style = "width: 90%;border-radius: 20px; box-shadow: 0px 0px 10px black;";
     this.renderer.appendChild(this.el.nativeElement, this.image);
    }
-
-  //  @HostListener ('mouseenter', ['$event'])
-  //  mouseenter(event: MouseEvent){
-  //    console.log(this.link);
-  //   this.image.src = this.link;
-  //   this.renderer.appendChild(this.el.nativeElement, this.image);
-  //  }
 
 }

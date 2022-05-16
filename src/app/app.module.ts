@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AttractComponent } from './attract/attract.component';
 import { SetImageDirective } from './directives/set-image.directive';
-import { FavIconDirective } from './directives/fav-icon.directive';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortCatComponent } from './sort-cat/sort-cat.component';
 import { FavService } from './services/fav.service';
@@ -17,11 +16,10 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HeaderComponent,
     AttractComponent,
+    FooterComponent,
     SetImageDirective,
-    FavIconDirective,
     FilterPipe,
-    SortCatComponent,
-    FooterComponent
+    SortCatComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,41 @@
 <div class="container">
-<div class="block" *ngFor="let attraction of listOfAttraction | filter: sortCategory[0].category ">
-<div appSetImage [link]="attraction.image" class="photo">
-</div>
-<div class="descriptions">
-  <div>
-    <div class="description">Nazwa Obiektu: <b>{{ attraction.name }}</b></div>
-  <div class="description">Lokalizacja: <b>{{ attraction.country }}</b></div>
-  <div class="description">Rok ukonczenia budowy: <b>{{ attraction.yearOfBuild }}</b></div>
-   <div class="description, favorite"  >
-     <button class="fav" (click)="favOrNot(attraction)">
-       <img *ngIf="attraction.favorite == false; else fill" src="assets/heartNoFill.svg" alt="">
-       <ng-template #fill>
-         <img src="assets/heartFill.svg" alt="">
-        </ng-template>
-  </button>
+  <div class="block"
+    *ngFor="let attraction of listOfAttraction | filter: sortCategory[0].category : sortCategory[0].favorite; let varEven = even">
+    <ng-container *ngIf="varEven == true;else odd">
+      <div appSetImage [link]="attraction.image" class="photo">
+      </div>
+      <div class="descriptions">
+        <div>
+          <div class="description">Nazwa Obiektu:&nbsp; <b>{{ attraction.name }}</b></div>
+          <div class="description">Lokalizacja:&nbsp; <b>{{ attraction.country }}</b></div>
+          <div class="description">Rok ukonczenia budowy:&nbsp; <b>{{ attraction.yearOfBuild }}</b></div>
+          <div class="favorite">
+              <img class="fav" (click)="favOrNot(attraction)" *ngIf="attraction.favorite == false; else fill" src="assets/heartNoFill.svg" alt="">
+              <ng-template #fill>
+                <img class="fav" (click)="favOrNot(attraction)" src="assets/heartFill.svg" alt="">
+              </ng-template>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <!-- ---------------------------------------------------- -->
+    <ng-template #odd>
+      <div class="descriptions">
+        <div>
+          <div class="description">Nazwa Obiektu:&nbsp; <b>{{ attraction.name }}</b></div>
+          <div class="description">Lokalizacja:&nbsp; <b>{{ attraction.country }}</b></div>
+          <div class="description">Rok ukonczenia budowy:&nbsp; <b>{{ attraction.yearOfBuild }}</b></div>
+          <div class="favorite">
+              <img class="fav" (click)="favOrNot(attraction)" *ngIf="attraction.favorite == false; else fill" src="assets/heartNoFill.svg" alt="">
+              <ng-template #fill>
+                <img class="fav" (click)="favOrNot(attraction)" src="assets/heartFill.svg" alt="">
+              </ng-template>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img class="rightPhoto" [src]="attraction.image" alt="">
+      </div>
+    </ng-template>
   </div>
-  </div>
-
-</div>
-</div>
 </div>

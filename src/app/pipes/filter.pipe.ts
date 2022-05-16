@@ -1,13 +1,16 @@
 import { Attraction } from './../models/attraction';
 import { Pipe, PipeTransform } from '@angular/core';
+import { SortCat } from '../services/fav.service';
 
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: Attraction[], arg: string): Attraction[] {
-    if(arg == 'name'){
+  transform(value: Attraction[], cat: string, fav: string): Attraction[] {
+
+    if(cat == 'name'){
+
       value = value.sort((a,b) =>{
         if(a.name>b.name){
           return 1;
@@ -15,7 +18,9 @@ export class FilterPipe implements PipeTransform {
           return -1;
         }
       });
-    }else if(arg == 'country'){
+
+    }else if(cat == 'country'){
+
       value = value.sort((a,b) =>{
         if(a.country>b.country){
           return 1;
@@ -23,7 +28,9 @@ export class FilterPipe implements PipeTransform {
           return -1;
         }
       });
-    }else if(arg == 'yearOfBuild'){
+
+    }else if(cat == 'yearOfBuild'){
+
       value = value.sort((a,b) =>{
         if(a.yearOfBuild>b.yearOfBuild){
           return 1;
@@ -31,9 +38,19 @@ export class FilterPipe implements PipeTransform {
           return -1;
         }
       });
-    }else if(arg == 'favorite'){
-      value = value.filter( fav => fav.favorite == true );
+
     }
+
+    if(fav == 'favorite'){
+
+      value = value.filter( (fav: Attraction) => fav.favorite == true);
+
+    }else if(fav == 'nonFavorite'){
+
+      value = value.filter( (fav: Attraction) => fav.favorite == false);
+
+    }
+
    return value;
   }
 

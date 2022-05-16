@@ -10,7 +10,7 @@ import { Attraction } from '../models/attraction';
 export class AttractComponent implements OnInit {
 
   public listOfAttraction: Attraction[] = [];
-  public sortCategory: Array<SortCat> = [{category: ''}];
+  public sortCategory: Array<SortCat> = [{category: '', favorite: 'mixed'}];
 
   constructor(private favService: FavService) {
     this.favService.getAttractionList().subscribe( (value) => {

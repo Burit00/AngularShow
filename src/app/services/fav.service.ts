@@ -7,7 +7,7 @@ import { Attraction } from '../models/attraction';
 })
 export class FavService {
 
-private sortCat : Array<SortCat> = [{category: ''}];
+private sortCat : Array<SortCat> = [{category: '', favorite: 'mixed'}];
 private ObsSortCat = new BehaviorSubject<Array<SortCat>>(this.sortCat);
 
 private listOfAttraction= new BehaviorSubject<Array<Attraction>>([]);
@@ -24,8 +24,13 @@ constructor() {
   this.listOfAttraction.next(list);
 }
 
-setValue(value: string){
+setCategory(value: string){
   this.sortCat[0].category = value;
+  this.ObsSortCat.next(this.sortCat);
+}
+
+setFavorite(value: string){
+  this.sortCat[0].favorite = value;
   this.ObsSortCat.next(this.sortCat);
 }
 
@@ -42,4 +47,5 @@ getAttractionList(): Observable<Array<Attraction>>{
 
 export interface SortCat{
   category: string ;
+  favorite: string ;
 }

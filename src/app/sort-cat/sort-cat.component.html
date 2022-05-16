@@ -1,11 +1,24 @@
-<div class="container">
-  <div class="select">
-    <div class="sort" (click)="showOptions()">Sortuj:</div>
-    <div class="options">
-      <div class="nazwa, option" (click)="sorting('name')">nazwa</div>
-      <div class="kraj, option" (click)="sorting('country')" >kraj</div>
-      <div class="rok_budowy, option" (click)="sorting('yearOfBuild')" >rok budowy</div>
-      <div class="favorite, option" (click)="sorting('favorite')" >ulubione</div>
+<div class="showOpt">
+  <div class="container">
+    <div class="select">
+      <div class="sort">Sortuj:</div>
+      <div class="options">
+        <div class="nazwa, option" (click)="sortingCat('name')">nazwa</div>
+        <div class="kraj, option" (click)="sortingCat('country')">kraj</div>
+        <div class="rok_budowy, option" (click)="sortingCat('yearOfBuild')">rok budowy</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="select">
+      <div class="sort">Kategoria:</div>
+      <div class="options">
+        <div class="nazwa, option" (click)="sortingFav('mixed')">Wszystko</div>
+        <div class="kraj, option" (click)="sortingFav('favorite')">Ulubione</div>
+        <div class="rok_budowy, option" (click)="sortingFav('nonFavorite')">Niepolubione</div>
+      </div>
     </div>
   </div>
 </div>

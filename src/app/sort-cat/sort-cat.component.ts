@@ -1,4 +1,3 @@
-import { BehaviorSubject, of } from 'rxjs';
 import { FavService } from './../services/fav.service';
 import { Component, OnInit, HostListener } from '@angular/core';
 
@@ -16,19 +15,13 @@ export class SortCatComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sorting(category: string){
-    this.favService.setValue(category);
+  sortingCat(category: string){
+    this.favService.setCategory(category);
   }
 
-  showOptions(){
-    const options = document.querySelector('.options');
-    options?.setAttribute('style','display:block; transition: 1s;');
-    this.riseHeight;
+  sortingFav(favorite: string){
+    this.favService.setFavorite(favorite);
   }
 
-  riseHeight(){
-    const container = document.querySelector('.container');
-    container?.animate({height: '100px'},200);
-  }
 
 }
