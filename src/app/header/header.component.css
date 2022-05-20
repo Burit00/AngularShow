@@ -11,7 +11,7 @@
   align-items: center;
   float: left;
   z-index: 10;
-  padding: 0 50px;
+  padding: 0 2vw;
   border-bottom: 3px solid black;
 }
 .logo{

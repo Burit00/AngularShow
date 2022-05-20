@@ -1,66 +1,91 @@
-*{
+* {
   color: #9a9a9a;
+  font-size: 2vw;
 }
 #fadeBlock {
   width: 100%;
+  margin: 3vh 0;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.6vw;
 }
 
 #fade {
-  animation: fade 3s linear infinite;
+  animation: fade 5s linear infinite;
+  font-size: 1.6vw;
 }
 
 @keyframes fade {
   0% {
-    color: #f00;
+    color: #ff000080;
+    text-shadow: 0px 0px 10px #ff000080;
   }
   33% {
-    color: #0f0;
+    color: #00ff0080;
+    text-shadow: 0px 0px 10px #00ff0080;
   }
   66% {
-    color: #00f;
+    color: #0000ff80;
+    text-shadow: 0px 0px 10px #0000ff80;
   }
   100% {
-    color: #f00;
+    color: #ff000080;
+    text-shadow: 0px 0px 10px #ff000080;
   }
 }
 
-#contact{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+#contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-b{
-    color: #CC67CE;
+b {
+  color: #cc67ce;
 }
 
-#left,#right{
-    display: flex;
-    font-size: 20px;
-    align-items: center;
+#left, #right {
+  display: flex;
+  align-items: center;
+}
+#right{
+  width: 40%;
+  justify-content: space-between;
 }
 
-#hr{
-    margin: 50px 0;
-    width: 95%;
-    height: 2px;
-    background-color: #CC67CE;
+#hr {
+  margin-bottom: 3vh;
+  width: 97%;
+  height: 0;
+  border: #cc67ce solid 1px;
+  border-radius: 1px;
+  background-color: #cc67ce;
 }
 
-button{
-    background: none;
-    border: none;
-    cursor: pointer;
+tr td {
+  padding: 0 10px;
+}
+.icon {
+  width: 7vw;
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
 }
 
-tr td{
-    padding: 0 10px;
-}
-img{
-    width: 90px;
-    margin: 0 10px;
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 3vw;
+  }
+  #fadeBlock,
+  #fade {
+    font-size: 2.5vw;
+  }
+  #right{
+    width: 65%;
+  }
+  .icon {
+    width: 11vw;
+  }
 }
