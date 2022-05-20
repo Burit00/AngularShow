@@ -42,13 +42,10 @@
   display: flex;
   justify-content: left;
   align-items: center;
+  flex-wrap: wrap;
 }
 .block:nth-of-type(2n-1) .descriptions {
   justify-content: right;
-}
-.descriptions {
-  display: flex;
-  flex-wrap: wrap;
 }
 .description {
   width: 90%;
@@ -117,5 +114,8 @@ b {
   }
   .block:nth-of-type(2n) .favorite {
     justify-content: right;
+  }
+  .fav {
+    width: 10vw;
   }
 }

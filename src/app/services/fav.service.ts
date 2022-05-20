@@ -15,11 +15,11 @@ private listOfAttraction= new BehaviorSubject<Array<Attraction>>([]);
 
 constructor() {
    const list = [
-    { name: "Wieża Eiffla", image: 'assets/eiffeltower.jpg', country: "Francja", yearOfBuild: 1889, favorite: false },
-    { name: "Krzywa Wieża w Pizie", image: 'assets/pisatower.jpg', country: "Włochy", yearOfBuild: 1372, favorite: true },
-    { name: "Big Ben", image: 'assets/bigben.jpg', country: "Wielka Brytania", yearOfBuild: 1859, favorite: false },
-    { name: "Brama Brandenburska", image: 'assets/brandenburggate.jpg', country: "Niemcy", yearOfBuild: 1791, favorite: false },
-    { name: "Parlament w Budapeszcie", image: 'assets/budapestparlament.jpg', country: "Węgry", yearOfBuild: 1904, favorite: false }
+    { name: "Wieża Eiffla", image: 'assets/eiffeltower.png', country: "Francja", yearOfBuild: 1889, favorite: false },
+    { name: "Krzywa Wieża w Pizie", image: 'assets/pisatower.png', country: "Włochy", yearOfBuild: 1372, favorite: true },
+    { name: "Big Ben", image: 'assets/bigben.png', country: "Wielka Brytania", yearOfBuild: 1859, favorite: false },
+    { name: "Brama Brandenburska", image: 'assets/brandenburggate.png', country: "Niemcy", yearOfBuild: 1791, favorite: false },
+    { name: "Parlament w Budapeszcie", image: 'assets/budapestparlament.png', country: "Węgry", yearOfBuild: 1904, favorite: false }
   ];
   this.listOfAttraction.next(list);
 }

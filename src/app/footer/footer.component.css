@@ -86,6 +86,7 @@ tr td {
     width: 65%;
   }
   .icon {
+    margin-top: 5vw;
     width: 11vw;
   }
 }
