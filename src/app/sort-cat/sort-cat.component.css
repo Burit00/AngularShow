@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 9;
   margin-top: 25px;
+  transform: translateX(-80%);
 }
 
 .container{
@@ -14,9 +15,7 @@
   height: 70px;
   display: flex;
   justify-content: center;
-  transform: translateX(-80%);
   transition: height 1s , transform 1s 1s;
-  box-shadow: black 0px 0px 20px;
 }
 
 .container:nth-child(even){
@@ -24,17 +23,15 @@
 }
 
 .container:hover{
-  transform: translateX(-20%);
+  transform: translateX(+60%);
   height: 165px;
   transition: transform 1s, height 1s 1s;
-}
-.container:hover .options{
-  cursor: pointer;
 }
 .options{
   margin-top: 10px;
   cursor: default;
   width: max-content;
+  cursor: pointer;
 }
 .select{
   overflow: hidden;
@@ -49,4 +46,10 @@
 }
 .option{
   margin-top: 5px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.option:hover{
+  font-size: 17px;
+  color: black;
 }

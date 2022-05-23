@@ -16,7 +16,11 @@
 }
 .logo{
   align-items: center;
-  height: 60px;
+  height: 8vh;
+}
+.logo>img{
+  width: 8vh;
+  filter: drop-shadow(0 0 0.5vh white);
 }
 .items{
   display: flex;
@@ -26,4 +30,22 @@
 a{
   color: white;
   text-decoration: none;
+}
+.item{
+  position: relative;
+
+}
+.item:after{
+  position: absolute;
+  content:'';
+  background-color: white;
+  box-shadow: 0 0 5px white;
+  bottom: -4px;
+  left: 0px;
+  height: 3px;
+  width: 0px;
+  transition: all 0.3s;
+}
+.item:hover:after{
+  width: 100%;
 }

@@ -1,0 +1,17 @@
+.buttons{
+  width: 5vw;
+  position: fixed;
+  bottom: 20vh;
+  left: 1vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.button{
+  border-radius: 50%;
+  background-color: blueviolet;
+  width: 5vw;
+  height: 5vw;
+  margin: 1vh 0;
+}

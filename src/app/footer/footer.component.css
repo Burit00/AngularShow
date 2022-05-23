@@ -17,20 +17,20 @@
 
 @keyframes fade {
   0% {
-    color: #ff000080;
-    text-shadow: 0px 0px 10px #ff000080;
+    color: #ff0000;
+    text-shadow: 0px 0px 15px #ff0000;
   }
   33% {
-    color: #00ff0080;
-    text-shadow: 0px 0px 10px #00ff0080;
+    color: #00ff00;
+    text-shadow: 0px 0px 15px #00ff00;
   }
   66% {
-    color: #0000ff80;
-    text-shadow: 0px 0px 10px #0000ff80;
+    color: #0000ff;
+    text-shadow: 0px 0px 15px #0000ff;
   }
   100% {
-    color: #ff000080;
-    text-shadow: 0px 0px 10px #ff000080;
+    color: #ff0000;
+    text-shadow: 0px 0px 15px #ff0000;
   }
 }
 
@@ -40,6 +40,7 @@
   justify-content: space-around;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  padding: 3vw;
 }
 
 b {
@@ -47,31 +48,38 @@ b {
 }
 
 #left, #right {
+  height: 10vh;
   display: flex;
   align-items: center;
 }
 #right{
   width: 40%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #hr {
   margin-bottom: 3vh;
   width: 97%;
-  height: 0;
-  border: #cc67ce solid 1px;
-  border-radius: 1px;
+  height: 5px;
+  border-radius: 5px;
   background-color: #cc67ce;
+  box-shadow: 0px 0px 30px #cc67ce;
 }
 
 tr td {
   padding: 0 10px;
 }
-.icon {
+.icon{
   width: 7vw;
+  background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px white;
   cursor: pointer;
+  margin: 2vh;
+  transition: .3s;
+}
+.icon:hover{
+  width: 8vw;
 }
 
 @media screen and (max-width: 800px) {
@@ -84,9 +92,12 @@ tr td {
   }
   #right{
     width: 65%;
+    margin-top: 5vw;
   }
   .icon {
-    margin-top: 5vw;
     width: 11vw;
+  }
+  .icon:hover{
+    width: 13vw;
   }
 }

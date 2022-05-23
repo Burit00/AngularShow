@@ -10,6 +10,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { SortCatComponent } from './sort-cat/sort-cat.component';
 import { FavService } from './services/fav.service';
 import { FooterComponent } from './footer/footer.component';
+import { ScrollbuttComponent } from './scrollbutt/scrollbutt.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent,
     SetImageDirective,
     FilterPipe,
-    SortCatComponent
+    SortCatComponent,
+    ScrollbuttComponent
   ],
   imports: [
     BrowserModule,
